@@ -1,5 +1,5 @@
 import type { Result, CommentSort, Time } from '../../types/corsica/index';
-import type Post from '../../types/corsica/post';
+import type { Post } from '../../types/corsica/post';
 import convertPost from '../../utils/handle/post';
 import { convertPostComment } from '../handle/comment';
 import type { PostComment } from '../../types/corsica/comment';

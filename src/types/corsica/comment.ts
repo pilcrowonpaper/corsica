@@ -1,4 +1,4 @@
-import type Submission from './submission';
+import type { Submission } from './submission';
 
 export interface Comment extends Submission {
 	data: CommentData;

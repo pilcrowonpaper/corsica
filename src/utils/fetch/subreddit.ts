@@ -1,10 +1,10 @@
 import type { Result, SubredditSort, Time } from '../../types/corsica/index';
-import type Post from '../../types/corsica/post';
+import type { Post } from '../../types/corsica/post';
 import convertPost from '../handle/post';
 import type { RedditPost } from '../../types/reddit/post';
 import { createSeachParams } from '../url';
 import type { Listing } from '../../types/reddit/index';
-import type Subreddit from '../../types/corsica/subreddit';
+import type { Subreddit } from '../../types/corsica/subreddit';
 import type { RedditSubreddit } from '../../types/reddit/subreddit';
 import { convertSubreddit } from '../handle/subreddit';
 
@@ -128,4 +128,4 @@ export const getSubreddits = async (
 	};
 };
 
-export const getSubredditComment = async () => {}
+export const getSubredditComment = async () => {};

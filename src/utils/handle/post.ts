@@ -1,4 +1,4 @@
-import type Post from '../../types/corsica/post';
+import type { Post } from '../../types/corsica/post';
 import type { RedditPost } from '../../types/reddit/post';
 
 const convertPost = (reddit_post: RedditPost): Post => {
@@ -130,7 +130,9 @@ const convertPost = (reddit_post: RedditPost): Post => {
 		content: {
 			url: reddit_post.data.url,
 			thumbnail:
-				reddit_post.data.thumbnail !== 'default' && reddit_post.data.thumbnail ? reddit_post.data.thumbnail : ''
+				reddit_post.data.thumbnail !== 'default' && reddit_post.data.thumbnail
+					? reddit_post.data.thumbnail
+					: ''
 		}
 	};
 	return {

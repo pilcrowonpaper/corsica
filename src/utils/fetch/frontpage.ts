@@ -1,5 +1,5 @@
 import type { Result } from '../../types/corsica/index';
-import type Post from '../../types/corsica/post';
+import type { Post } from '../../types/corsica/post';
 import convertPost from '../handle/post';
 import type { RedditPost } from '../../types/reddit/post';
 import { createSeachParams } from '../url';
@@ -11,7 +11,7 @@ export const getFrontpagePosts = async (
 	access_token: string | null = ''
 ): Promise<Result<{ posts: { data: Post[]; after: string; before: string } }>> => {
 	const search_params = createSeachParams({
-		t: options.time || "today",
+		t: options.time || 'today',
 		after: options.after,
 		before: options.before,
 		raw_json: 1
@@ -24,7 +24,7 @@ export const getFrontpagePosts = async (
 				}
 		  }
 		: {};
-	const url = `${domain}/${options.sort || "best"}.json?${search_params.toString()}`;
+	const url = `${domain}/${options.sort || 'best'}.json?${search_params.toString()}`;
 	const response = await fetch(url, init);
 	if (!response.ok) {
 		return {

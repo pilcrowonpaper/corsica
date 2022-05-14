@@ -1,4 +1,4 @@
-import type Subreddit from '../../types/corsica/subreddit';
+import type { Subreddit } from '../../types/corsica/subreddit';
 import type { RedditSubreddit } from '../../types/reddit/subreddit';
 
 export const convertSubreddit = (reddit_subreddit: RedditSubreddit): Subreddit => {

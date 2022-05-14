@@ -1,6 +1,6 @@
-import type Submission from './submission';
+import type { Submission } from './submission';
 
-interface Post extends Submission {
+export interface Post extends Submission {
 	data: {
 		author: string;
 		id: string;
@@ -37,5 +37,3 @@ interface Post extends Submission {
 		};
 	};
 }
-
-export default Post;

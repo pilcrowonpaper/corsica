@@ -1,5 +1,3 @@
-interface Submission {
+export interface Submission {
     type: "post" | "comment"
 }
-
-export default Submission 

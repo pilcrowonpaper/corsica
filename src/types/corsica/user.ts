@@ -1,12 +1,10 @@
 import type { About } from './index';
 
-interface User extends About {
+export interface User extends About {
 	following: boolean;
 	post_karma: number;
 	comment_karma: number;
 }
-
-export default User;
 
 export interface UserCompact {
 	name: string;
