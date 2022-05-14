@@ -3,14 +3,20 @@ import type { RedditPost } from '../../types/reddit/post';
 
 const convertPost = (reddit_post: RedditPost): Post => {
 	let data = {
-		author: reddit_post.data.author,
+		author: {
+			name: reddit_post.data.author,
+			id: reddit_post.data.author_fullname.split("_")[1]
+		},
+		subreddit: {
+			name: reddit_post.data.subreddit,
+			id: reddit_post.data.subreddit_id.split("_")[1]
+		},
 		title: reddit_post.data.title,
 		score: reddit_post.data.score,
 		vote: reddit_post.data.likes === null ? 0 : reddit_post.data.likes ? 1 : -1,
 		saved: reddit_post.data.saved,
 		nsfw: reddit_post.data.over_18,
 		spoiler: reddit_post.data.spoiler,
-		subreddit: reddit_post.data.subreddit,
 		created: reddit_post.data.created_utc,
 		id: reddit_post.data.id,
 		submission_flair: {

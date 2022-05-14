@@ -23,12 +23,19 @@ export interface UserComment extends Submission {
 
 interface CommentData {
 	id: string;
-	author: string;
+	author: {
+		name: string;
+		id: string;
+	};
+	subreddit: {
+		name: string;
+		id: string;
+	};
 	created: number;
 	content: {
+		type: 'text';
 		text: string;
 	};
-	subreddit: string;
 	score: number;
 	vote: number;
 	saved: boolean;

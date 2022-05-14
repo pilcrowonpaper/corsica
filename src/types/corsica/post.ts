@@ -2,7 +2,14 @@ import type { Submission } from './submission';
 
 export interface Post extends Submission {
 	data: {
-		author: string;
+		author: {
+			name: string;
+			id: string;
+		};
+		subreddit: {
+			name: string;
+			id: string;
+		};
 		id: string;
 		submission_flair: {
 			has: boolean;
@@ -16,7 +23,6 @@ export interface Post extends Submission {
 		saved: boolean;
 		nsfw: boolean;
 		spoiler: boolean;
-		subreddit: string;
 		created: number;
 		upvote_ratio: number;
 		content: {
