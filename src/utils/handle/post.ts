@@ -15,7 +15,8 @@ const convertPost = (reddit_post: RedditPost): Post => {
 		id: reddit_post.data.id,
 		submission_flair: {
 			has: !!reddit_post.data.link_flair_text
-		}
+		},
+		upvote_ratio:  reddit_post.data.upvote_ratio
 	};
 	if (data.submission_flair.has) {
 		const flair_data = {

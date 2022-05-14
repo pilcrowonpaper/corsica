@@ -19,6 +19,7 @@ export interface Post extends Submission {
 		spoiler: boolean;
 		subreddit: string;
 		created: number;
+		upvote_ratio: number;
 		content: {
 			url?: string;
 			text?: string;
