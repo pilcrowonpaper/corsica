@@ -1,16 +1,16 @@
-import type { Result, SubredditSort, Time, UserCommentSort } from '../../types/alaska/index';
+import type { Result, SubredditSort, Time, UserCommentSort } from '../../types/corsica/index';
 import convertPost from '../handle/post';
 import type { RedditPost } from '../../types/reddit/post';
 import { createSeachParams } from '../url';
 import type { Listing } from '../../types/reddit/index';
-import type User from '../../types/alaska/user';
+import type User from '../../types/corsica/user';
 import type { RedditUser, RedditUserCompact } from '../../types/reddit/user';
 import { convertUser, convertUserCompact } from '../handle/user';
-import type Post from '../../types/alaska/post';
-import type { Comment } from '../../types/alaska/comment';
+import type Post from '../../types/corsica/post';
+import type { Comment } from '../../types/corsica/comment';
 import type { RedditComment } from '../../types/reddit/comment';
 import { convertUserComment } from '../handle/comment';
-import type { UserCompact } from '../../types/alaska/user';
+import type { UserCompact } from '../../types/corsica/user';
 
 type PostsResult = Result<{ posts: { data: Post[]; after: string; before: string } }>;
 type CommentsResult = Result<{ comments: { data: Comment[]; after: string; before: string } }>;

@@ -1,4 +1,4 @@
-import type { AuthUser } from '../../types/alaska/auth';
+import type { AuthUser } from '../../types/corsica/auth';
 import type { RedditAuthUser } from '../../types/reddit/auth';
 
 export const convertUser = (reddit_user: RedditAuthUser): AuthUser => {

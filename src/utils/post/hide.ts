@@ -1,4 +1,4 @@
-import type { Result } from '../../types/alaska/index';
+import type { Result } from '../../types/corsica/index';
 
 export const hideSubmission = async (
 	id: string,

@@ -1,10 +1,10 @@
-import type { Result } from '../../types/alaska/index';
-import type Post from '../../types/alaska/post';
+import type { Result } from '../../types/corsica/index';
+import type Post from '../../types/corsica/post';
 import convertPost from '../handle/post';
 import type { RedditPost } from '../../types/reddit/post';
 import { createSeachParams } from '../url';
 import type { Listing } from '../../types/reddit/index';
-import type { FrontpageSort, Time } from '../../types/alaska/index';
+import type { FrontpageSort, Time } from '../../types/corsica/index';
 
 export const getFrontpagePosts = async (
 	options: { sort?: FrontpageSort; time?: Time; after?: string; before?: string },

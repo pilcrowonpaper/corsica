@@ -1,4 +1,4 @@
-import type { About } from "../../types/alaska/index";
+import type { About } from "./index";
 
 interface Subreddit extends About {
 	subscribers: number;

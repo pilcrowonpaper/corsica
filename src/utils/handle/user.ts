@@ -1,5 +1,5 @@
-import type { UserCompact } from '../../types/alaska/user';
-import type User from '../../types/alaska/user';
+import type { UserCompact } from '../../types/corsica/user';
+import type User from '../../types/corsica/user';
 import type { RedditUser, RedditUserCompact } from '../../types/reddit/user';
 
 export const convertUser = (reddit_user: RedditUser): User => {

@@ -1,8 +1,8 @@
-import type { Result, CommentSort, Time } from '../../types/alaska/index';
-import type Post from '../../types/alaska/post';
+import type { Result, CommentSort, Time } from '../../types/corsica/index';
+import type Post from '../../types/corsica/post';
 import convertPost from '../../utils/handle/post';
 import { convertPostComment } from '../handle/comment';
-import type { PostComment } from '../../types/alaska/comment';
+import type { PostComment } from '../../types/corsica/comment';
 import type { MoreComments } from '../../types/reddit/comment';
 import type { RedditPost } from '../../types/reddit/post';
 import { createSeachParams } from '../../utils/url';

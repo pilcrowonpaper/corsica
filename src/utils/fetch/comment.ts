@@ -1,9 +1,9 @@
-import type { Result } from '../../types/alaska/index';
+import type { Result } from '../../types/corsica/index';
 import { createSeachParams } from '../../utils/url';
 import type { Listing } from '../../types/reddit/index';
 import { convertComment } from '../../utils/handle/comment';
 import type { RedditComment } from '../../types/reddit/comment';
-import type { Comment } from '../../types/alaska/comment';
+import type { Comment } from '../../types/corsica/comment';
 
 export const getComment = async (
 	id: string,

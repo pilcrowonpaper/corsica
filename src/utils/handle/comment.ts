@@ -1,4 +1,4 @@
-import type { PostComment, UserComment, Comment } from '../../types/alaska/comment';
+import type { PostComment, UserComment, Comment } from '../../types/corsica/comment';
 import type { Listing } from '../../types/reddit/index';
 import type { MoreComments, RedditComment } from '../../types/reddit/comment';
 

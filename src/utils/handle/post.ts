@@ -1,4 +1,4 @@
-import type Post from '../../types/alaska/post';
+import type Post from '../../types/corsica/post';
 import type { RedditPost } from '../../types/reddit/post';
 
 const convertPost = (reddit_post: RedditPost): Post => {

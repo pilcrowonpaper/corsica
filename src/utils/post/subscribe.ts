@@ -1,4 +1,4 @@
-import type { Result } from '../../types/alaska/index';
+import type { Result } from '../../types/corsica/index';
 
 export const subscribeToSubreddit = async (
 	name: string,

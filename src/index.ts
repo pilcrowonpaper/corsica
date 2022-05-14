@@ -19,7 +19,7 @@ import type {
 	SubredditSort,
 	Time,
 	UserCommentSort
-} from './types/alaska/index';
+} from './types/corsica/index';
 
 class Corsica {
 	public access_token: string | null = '';

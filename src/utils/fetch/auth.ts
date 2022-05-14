@@ -1,5 +1,5 @@
-import type { Result } from '../../types/alaska/index';
-import type { AuthUser } from '../../types/alaska/auth';
+import type { Result } from '../../types/corsica/index';
+import type { AuthUser } from '../../types/corsica/auth';
 import type { RedditAuthUser } from '../../types/reddit/auth';
 import { convertUser } from '../handle/auth';
 import { createSeachParams } from '../url';

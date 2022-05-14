@@ -1,6 +1,6 @@
-import type { Result, SearchSort, Time } from '../../types/alaska/index';
-import type Post from '../../types/alaska/post';
-import type User from '../../types/alaska/user';
+import type { Result, SearchSort, Time } from '../../types/corsica/index';
+import type Post from '../../types/corsica/post';
+import type User from '../../types/corsica/user';
 import type { Listing } from '../../types/reddit/index';
 import type { RedditPost } from '../../types/reddit/post';
 import type { RedditSubreddit } from '../../types/reddit/subreddit';
@@ -9,7 +9,7 @@ import { convertUser } from '../handle/user';
 import convertPost from '../handle/post';
 import { convertSubreddit } from '../handle/subreddit';
 import { createSeachParams } from '../url';
-import type Subreddit from '../../types/alaska/subreddit';
+import type Subreddit from '../../types/corsica/subreddit';
 
 type PostsResult = Result<{ posts: { data: Post[]; after: string; before: string } }>;
 type SubredditsResult = Result<{
