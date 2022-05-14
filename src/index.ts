@@ -21,31 +21,31 @@ import type {
 	UserCommentSort
 } from './types/alaska/index';
 
-class Alaska {
+class Corsica {
 	public access_token: string | null = '';
 	constructor(options: { access_token?: string } = {}) {
 		this.access_token = options.access_token || null;
 	}
 	public subreddit(name: string) {
-		return new AlaskaSubreddit(name, this.access_token);
+		return new CorsicaSubreddit(name, this.access_token);
 	}
 	public post(id: string) {
-		return new AlaskaPost(id, this.access_token);
+		return new CorsicaPost(id, this.access_token);
 	}
 	public auth() {
-		return new AlaskaAuth(this.access_token);
+		return new CorsicaAuth(this.access_token);
 	}
 	public user(name: string) {
-		return new AlaskaUser(name, this.access_token);
+		return new CorsicaUser(name, this.access_token);
 	}
 	public comment(id: string) {
-		return new AlaskaComment(id, this.access_token);
+		return new CorsicaComment(id, this.access_token);
 	}
 	public frontpage() {
-		return new AlaskaFrontpage(this.access_token);
+		return new CorsicaFrontpage(this.access_token);
 	}
 	public search(query: string) {
-		return new AlaskaSearch(query, this.access_token);
+		return new CorsicaSearch(query, this.access_token);
 	}
 	public async getPosts(ids: string[]) {
 		return await getPosts(ids, this.access_token);
@@ -64,9 +64,9 @@ class Alaska {
 	}
 }
 
-export default Alaska;
+export default Corsica;
 
-class AlaskaSubmission {
+class CorsicaSubmission {
 	protected access_token: string | null;
 	protected type: 'post' | 'comment';
 	protected id: string;
@@ -95,7 +95,7 @@ class AlaskaSubmission {
 	}
 }
 
-class AlaskaSubreddit {
+class CorsicaSubreddit {
 	private name: string;
 	private access_token: string | null;
 	constructor(name: string, access_token: string | null) {
@@ -116,19 +116,19 @@ class AlaskaSubreddit {
 	}
 }
 
-class AlaskaPost extends AlaskaSubmission {
+class CorsicaPost extends CorsicaSubmission {
 	constructor(post_id: string, access_token: string | null) {
 		super(post_id, 'post', access_token);
 	}
 	public comment(comment_id: string) {
-		return new AlaskaPostComment(this.id, comment_id, this.access_token);
+		return new CorsicaPostComment(this.id, comment_id, this.access_token);
 	}
 	public async get(options: { sort?: CommentSort; time?: Time } = {}) {
 		return await getPost(this.id, options, this.access_token);
 	}
 }
 
-class AlaskaUser {
+class CorsicaUser {
 	private name: string;
 	private access_token: string | null;
 	constructor(name: string, access_token: string | null) {
@@ -164,7 +164,7 @@ class AlaskaUser {
 	}
 }
 
-class AlaskaComment extends AlaskaSubmission {
+class CorsicaComment extends CorsicaSubmission {
 	constructor(id: string, access_token: string | null) {
 		super(id, 'comment', access_token);
 	}
@@ -173,7 +173,7 @@ class AlaskaComment extends AlaskaSubmission {
 	}
 }
 
-class AlaskaAuth {
+class CorsicaAuth {
 	private access_token: string | null;
 	constructor(access_token: string | null) {
 		this.access_token = access_token;
@@ -183,7 +183,7 @@ class AlaskaAuth {
 	}
 }
 
-class AlaskaSearch {
+class CorsicaSearch {
 	private query: string;
 	private access_token: string | null;
 	constructor(query: string, access_token: string | null) {
@@ -221,7 +221,7 @@ class AlaskaSearch {
 	}
 }
 
-class AlaskaFrontpage {
+class CorsicaFrontpage {
 	private access_token: string | null;
 	constructor(access_token: string | null) {
 		this.access_token = access_token;
@@ -238,7 +238,7 @@ class AlaskaFrontpage {
 	}
 }
 
-class AlaskaPostComment extends AlaskaSubmission {
+class CorsicaPostComment extends CorsicaSubmission {
 	private post_id: string;
 	constructor(post_id: string, comment_id: string, access_token: string | null) {
 		super(comment_id, 'comment', access_token);
