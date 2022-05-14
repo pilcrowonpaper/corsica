@@ -1,6 +1,6 @@
 {
 	"name": "corsica-reddit",
-	"version": "0.6.3",
+	"version": "0.6.4",
 	"description": "A simple Reddit API wrapper for JavaScript.",
 	"main": "lib/index.js",
   "types": "lib/index.d.ts",
