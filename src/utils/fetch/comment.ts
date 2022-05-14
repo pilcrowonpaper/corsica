@@ -1,7 +1,7 @@
-import type { Result } from '../../types/alaska';
-import { createSeachParams } from '../../modules/utils/url';
-import type { Listing } from '../../types/reddit';
-import { convertComment } from '../../modules/handle/comment';
+import type { Result } from '../../types/alaska/index';
+import { createSeachParams } from '../../utils/url';
+import type { Listing } from '../../types/reddit/index';
+import { convertComment } from '../../utils/handle/comment';
 import type { RedditComment } from '../../types/reddit/comment';
 import type { Comment } from '../../types/alaska/comment';
 
