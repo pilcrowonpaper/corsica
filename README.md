@@ -59,6 +59,12 @@ const { data, error } = corsica.post('un038h').upvote(1)
 const { data, error } = corsica.post('un038h').save()
 ```
 
+## Installation
+
+```
+npm i corsica-reddit
+```
+
 ## Documentation
 
 Coming soon
