@@ -11,7 +11,6 @@ export interface Post extends Submission {
 			background_color?: string;
 		};
 		title: string;
-		type: string;
 		score: number;
 		vote: number;
 		saved: boolean;
@@ -21,6 +20,7 @@ export interface Post extends Submission {
 		created: number;
 		upvote_ratio: number;
 		content: {
+			type: string;
 			url?: string;
 			text?: string;
 			embed?: {

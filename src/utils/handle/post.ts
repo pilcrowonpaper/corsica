@@ -16,7 +16,7 @@ const convertPost = (reddit_post: RedditPost): Post => {
 		submission_flair: {
 			has: !!reddit_post.data.link_flair_text
 		},
-		upvote_ratio:  reddit_post.data.upvote_ratio
+		upvote_ratio: reddit_post.data.upvote_ratio
 	};
 	if (data.submission_flair.has) {
 		const flair_data = {
@@ -29,8 +29,8 @@ const convertPost = (reddit_post: RedditPost): Post => {
 	}
 	if (reddit_post.data.post_hint === 'image') {
 		const content_data = {
-			type: 'image',
 			content: {
+				type: 'image',
 				media: [
 					{
 						width: reddit_post.data.preview.images[0].source.width,
@@ -50,8 +50,8 @@ const convertPost = (reddit_post: RedditPost): Post => {
 	}
 	if (reddit_post.data.post_hint === 'rich:video') {
 		const content_data = {
-			type: 'embed',
 			content: {
+				type: 'embed',
 				embed: {
 					width: reddit_post.data.media_embed.width,
 					height: reddit_post.data.media_embed.height,
@@ -71,8 +71,8 @@ const convertPost = (reddit_post: RedditPost): Post => {
 	}
 	if (reddit_post.data.domain === 'v.redd.it' && reddit_post.data.media) {
 		const content_data = {
-			type: 'video',
 			content: {
+				type: 'video',
 				embed: {
 					width: reddit_post.data.media.reddit_video.width,
 					height: reddit_post.data.media.reddit_video.width,
@@ -91,8 +91,8 @@ const convertPost = (reddit_post: RedditPost): Post => {
 	}
 	if (reddit_post.data.is_self) {
 		const content_data = {
-			type: 'text',
 			content: {
+				type: 'text',
 				text: reddit_post.data.selftext_html
 			}
 		};
@@ -107,8 +107,8 @@ const convertPost = (reddit_post: RedditPost): Post => {
 	if (reddit_post.data.url.includes('https://www.reddit.com/gallery/')) {
 		const media_array = Object.values(reddit_post.data.media_metadata);
 		const content_data = {
-			type: 'image',
 			content: {
+				type: 'image',
 				media: media_array.map((val) => {
 					return {
 						url: val.s.u,
@@ -127,8 +127,8 @@ const convertPost = (reddit_post: RedditPost): Post => {
 		};
 	}
 	const content_data = {
-		type: 'link',
 		content: {
+			type: 'link',
 			url: reddit_post.data.url,
 			thumbnail:
 				reddit_post.data.thumbnail !== 'default' && reddit_post.data.thumbnail
