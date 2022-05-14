@@ -1,0 +1,39 @@
+{
+	"name": "corsica-reddit",
+	"version": "0.1.0",
+	"description": "A simple Reddit API wrapper for JavaScript.",
+	"main": "lib/index.js",
+  "types": "lib/index.d.ts",
+	"files": [
+		"lib/**/*"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsc",
+		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+		"lint": "eslint",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pilcrowOnPaper/corsica.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/pilcrowOnPaper/corsica/issues"
+	},
+	"homepage": "https://github.com/pilcrowOnPaper/corsica#readme",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.23.0",
+		"@typescript-eslint/parser": "^5.23.0",
+		"eslint": "^8.15.0",
+		"prettier": "^2.6.2",
+		"typescript": "^4.6.4"
+	}
+}
