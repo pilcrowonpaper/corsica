@@ -1,4 +1,4 @@
-export { Corsica } from './corsica';
+export { default as default } from './corsica';
 
 export type { Post as CorsiaPost } from './types/corsica/post';
 export type { AuthUser as CorsicaAuthUser } from './types/corsica/auth';

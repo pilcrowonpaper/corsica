@@ -21,7 +21,7 @@ import type {
 	UserCommentSort
 } from './types/corsica/index';
 
-export class Corsica {
+class Corsica {
 	public access_token: string | null = '';
 	constructor(options: { access_token?: string } = {}) {
 		this.access_token = options.access_token || null;
