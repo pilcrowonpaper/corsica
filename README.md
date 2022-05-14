@@ -9,7 +9,7 @@ This is a JavaScript library specifically made for [arctic](https://github.com/p
 Well, first here's an example:
 
 ```ts
-const corisca = new Corsica()
+const corsica = new Corsica()
 // get a post with id = un038h, and sort the comments by 'new'
 const { data, error } = corsica.post('un038h').get({ sort: 'new' })
 ```
@@ -65,4 +65,4 @@ Coming soon
 
 ## Contributing
 
-Why, thank you! I have 0 experience in open-source and managing packages, so any help will be appreciated!
+Well, thank you for considering! I have 0 experience in open-source and managing packages, so any help will be appreciated!
