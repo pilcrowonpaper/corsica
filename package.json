@@ -1,9 +1,9 @@
 {
 	"name": "corsica-reddit",
-	"version": "0.7.0",
+	"version": "0.7.1",
 	"description": "A simple Reddit API wrapper for JavaScript.",
 	"main": "lib/index.js",
-  "types": "lib/index.d.ts",
+	"types": "lib/index.d.ts",
 	"files": [
 		"lib/**/*"
 	],
@@ -12,11 +12,11 @@
 		"build": "tsc",
 		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
 		"lint": "eslint",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+		"prepare": "npm run build",
+		"prepublishOnly": "npm test && npm run lint",
+		"preversion": "npm run lint",
+		"version": "npm run format && git add -A src",
+		"postversion": "git push && git push --tags"
 	},
 	"repository": {
 		"type": "git",
