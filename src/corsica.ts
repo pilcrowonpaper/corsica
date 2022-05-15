@@ -102,7 +102,7 @@ class CorsicaSubreddit {
 		this.name = name;
 		this.access_token = access_token;
 	}
-	public async posts(options: { sort?: SubredditSort; time?: Time; after?: string } = {}) {
+	public async getPosts(options: { sort?: SubredditSort; time?: Time; after?: string } = {}) {
 		return await getSubredditPosts(this.name, options, this.access_token);
 	}
 	public async subscribe() {
@@ -202,13 +202,7 @@ class CorsicaSearch {
 			nsfw?: boolean;
 		} = {}
 	) {
-		return await getSearchResult(
-			this.query,
-			null,
-			'posts',
-			options,
-			this.access_token
-		);
+		return await getSearchResult(this.query, null, 'posts', options, this.access_token);
 	}
 	public async getSubreddits(
 		options: {
@@ -217,13 +211,7 @@ class CorsicaSearch {
 			nsfw?: boolean;
 		} = {}
 	) {
-		return await getSearchResult(
-			this.query,
-			null,
-			'subreddits',
-			options,
-			this.access_token
-		);
+		return await getSearchResult(this.query, null, 'subreddits', options, this.access_token);
 	}
 	public async getUsers(
 		options: {
@@ -232,13 +220,7 @@ class CorsicaSearch {
 			nsfw?: boolean;
 		} = {}
 	) {
-		return await getSearchResult(
-			this.query,
-			null,
-			'users',
-			options,
-			this.access_token
-		);
+		return await getSearchResult(this.query, null, 'users', options, this.access_token);
 	}
 }
 
