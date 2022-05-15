@@ -7,7 +7,7 @@ export interface Comment extends Submission {
 export interface PostComment extends Submission {
 	data: CommentData & {
 		replies: {
-			list: Comment[];
+			data: Comment[];
 			more: string[];
 		};
 		depth: number;

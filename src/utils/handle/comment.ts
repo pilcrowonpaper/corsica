@@ -66,7 +66,7 @@ export const convertPostComment = (reddit_comment: RedditComment): PostComment =
 			post_title: reddit_comment.data.link_title,
 			id: reddit_comment.data.id,
 			replies: {
-				list: replies,
+				data: replies,
 				more: more.length > 0 ? more[0].data.children : []
 			},
 			parent_id:
