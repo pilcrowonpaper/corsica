@@ -20,7 +20,7 @@ It's pretty simple and bare, but it returns something useful rather than Reddit 
 {
   author: {
     name: "-TheRightTree-",
-    id: "",
+    id: "36rpckx9",
   },
   id: "ebdsce",
   submission_flair: {
