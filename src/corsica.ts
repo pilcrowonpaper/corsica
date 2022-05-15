@@ -114,6 +114,9 @@ class CorsicaSubreddit {
 	public async about() {
 		return await getSubredditAbout(this.name, this.access_token);
 	}
+	public async search(query: string) {
+		return new CorsicaSubredditSearch(query, this.name, this.access_token);
+	}
 }
 
 class CorsicaPost extends CorsicaSubmission {
@@ -199,7 +202,13 @@ class CorsicaSearch {
 			nsfw?: boolean;
 		} = {}
 	) {
-		return await getSearchResult(this.query, 'posts', options, this.access_token);
+		return await getSearchResult(
+			this.query,
+			null,
+			'posts',
+			options,
+			this.access_token
+		);
 	}
 	public async getSubreddits(
 		options: {
@@ -208,7 +217,13 @@ class CorsicaSearch {
 			nsfw?: boolean;
 		} = {}
 	) {
-		return await getSearchResult(this.query, 'subreddits', options, this.access_token);
+		return await getSearchResult(
+			this.query,
+			null,
+			'subreddits',
+			options,
+			this.access_token
+		);
 	}
 	public async getUsers(
 		options: {
@@ -217,7 +232,13 @@ class CorsicaSearch {
 			nsfw?: boolean;
 		} = {}
 	) {
-		return await getSearchResult(this.query, 'users', options, this.access_token);
+		return await getSearchResult(
+			this.query,
+			null,
+			'users',
+			options,
+			this.access_token
+		);
 	}
 }
 
@@ -246,5 +267,33 @@ class CorsicaPostComment extends CorsicaSubmission {
 	}
 	public async get(options: { sort?: CommentSort; time?: Time } = {}) {
 		return await getPostComment(this.post_id, this.id, options, this.access_token);
+	}
+}
+
+class CorsicaSubredditSearch {
+	private query: string;
+	private access_token: string | null;
+	private subreddit_name: string;
+	constructor(query: string, subreddit_name: string, access_token: string | null) {
+		this.query = query;
+		this.access_token = access_token;
+		this.subreddit_name = subreddit_name;
+	}
+	public async getPosts(
+		options: {
+			sort?: SearchSort;
+			time?: Time;
+			after?: string;
+			before?: string;
+			nsfw?: boolean;
+		} = {}
+	) {
+		return await getSearchResult(
+			this.query,
+			this.subreddit_name,
+			'posts',
+			options,
+			this.access_token
+		);
 	}
 }

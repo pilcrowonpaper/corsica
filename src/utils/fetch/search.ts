@@ -19,6 +19,7 @@ type UsersResult = Result<{ users: { data: User[]; after: string; before: string
 
 export const getSearchResult = async (
 	query: string,
+	subreddit_name: string | null,
 	type: 'posts' | 'subreddits' | 'users',
 	options: { sort?: SearchSort; time?: Time; after?: string; before?: string; nsfw?: boolean },
 	access_token: string | null = ''
@@ -56,7 +57,8 @@ export const getSearchResult = async (
 				}
 		  }
 		: {};
-	const url = `${domain}/search.json?${search_params.toString()}`;
+	const pathname = subreddit_name ? `/r/${subreddit_name}/search.json` : `/search.json`;
+	const url = `${domain}${pathname}?${search_params.toString()}`;
 	const response = await fetch(url, init);
 	if (!response.ok) {
 		return {

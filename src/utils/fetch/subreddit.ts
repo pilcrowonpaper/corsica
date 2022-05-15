@@ -127,5 +127,3 @@ export const getSubreddits = async (
 		}
 	};
 };
-
-export const getSubredditComment = async () => {};
